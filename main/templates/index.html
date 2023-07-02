@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load i18n %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdn.bootcdn.net/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.compat.min.css">
@@ -26,15 +28,10 @@
     <div class="row container">
 
         <div class="col s12 center">
-            <p class="flow-text animate__animated animate__bounce element frame_box" > 今日 <br> GPT 严选  </p>
+            <p class="flow-text animate__animated animate__bounce element frame_box" > {% trans '今日 <br> GPT 严选' %} </p>
         </div>
         <div class="col s12 center animate__animated animate__bounceInUp">
-            <a href="https://github.com/121812/eatgpt" target="_blank">
-                <img src="{% static 'mark-github.svg' %}" >
-            </a>
-            {% comment %} <a class="center" target="_blank">
-                <img src="{% static 'notes.svg' %}" >
-            </a> {% endcomment %}
+            <a class="github-button" href="https://github.com/121812/eatgpt" data-color-scheme="no-preference: dark; light: dark_dimmed; dark: dark_high_contrast;" data-icon="octicon-star" data-show-count="true" aria-label="Star 121812/eatgpt on GitHub">Star</a>
         </div>       
         <div  class="col s12 center">
             <ul id="food" class="animate__animated animate__fadeInUpBig">
